@@ -16,12 +16,16 @@ function App() {
     }
   }, []);
 
+  console.log(images);
+
   if (!images) return <div>No Images Avaliable</div>;
   return (
     <div className="App">
       {images.map((item) => (
         <div key={item.data[0].nasa_id} className="item_container">
+          <h3>{item.data[0].title}</h3>
           <img src={item.links[0].href} alt="" />
+          <p>{item.data[0].description}</p>
         </div>
       ))}
     </div>
