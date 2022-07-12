@@ -1,0 +1,24 @@
+.pag_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 35%;
+    margin: 30px auto;
+}
+
+.pag_item{
+    list-style: none;
+}
+
+.pag_link {
+        text-decoration: none;
+        color: black;
+        font-size: 25px;
+        font-weight: bold;
+        cursor: pointer;
+}
+
+.pag_link:hover {
+    text-decoration: underline;
+}
+

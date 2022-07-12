@@ -2,14 +2,14 @@ import "./App.css";
 import { useEffect, useState } from "react";
 
 import List from "./components/list/list";
-
+import Pagination from "./components/pagination/pagination";
 function App() {
   const [images, setImages] = useState([]);
 
   const [loading, setLoading] = useState(false);
 
   const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage, setPostsPerPage] = useState(10);
+  const [postsPerPage, setPostsPerPage] = useState(9);
 
   useEffect(() => {
     fetchData();
@@ -30,9 +30,17 @@ function App() {
   const indexOfFistPost = indexOfLastPost - postsPerPage;
   const currentPosts = images.slice(indexOfFistPost, indexOfLastPost);
 
+  // set Pagination numbers
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
   return (
     <div className="App">
       <List images={currentPosts} loading={loading} />
+      <Pagination
+        postsPerPage={postsPerPage}
+        totalPosts={images.length}
+        paginate={paginate}
+      />
     </div>
   );
 }
