@@ -22,3 +22,7 @@
     text-decoration: underline;
 }
 
+.currentPage {
+    text-decoration: underline;
+    color: lightskyblue;
+}

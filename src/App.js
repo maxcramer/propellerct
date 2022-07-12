@@ -23,7 +23,7 @@ function App() {
     }
   }, []);
   console.log(images);
-  // if (!images) return <div>No Images Avaliable</div>;
+  if (!images) return <div>Loading...</div>;
 
   // Get current posts
   const indexOfLastPost = currentPage * postsPerPage;
@@ -40,6 +40,7 @@ function App() {
         postsPerPage={postsPerPage}
         totalPosts={images.length}
         paginate={paginate}
+        currentPage={currentPage}
       />
     </div>
   );
