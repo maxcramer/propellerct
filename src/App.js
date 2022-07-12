@@ -25,6 +25,7 @@ function App() {
         <div key={item.data[0].nasa_id} className="item_container">
           <h3>{item.data[0].title}</h3>
           <img src={item.links[0].href} alt="" />
+          <p>{item.data[0].date_created.split("T")[0]}</p>
           <p>{item.data[0].description}</p>
         </div>
       ))}
