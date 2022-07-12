@@ -4,7 +4,12 @@ import { useEffect, useState } from "react";
 import List from "./components/list/list";
 
 function App() {
-  const [images, setImages] = useState(null);
+  const [images, setImages] = useState([]);
+
+  const [loading, setLoading] = useState(false);
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage, setPostsPerPage] = useState(10);
 
   useEffect(() => {
     fetchData();
@@ -17,12 +22,17 @@ function App() {
       setImages(items);
     }
   }, []);
+  console.log(images);
+  // if (!images) return <div>No Images Avaliable</div>;
 
-  if (!images) return <div>No Images Avaliable</div>;
+  // Get current posts
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFistPost = indexOfLastPost - postsPerPage;
+  const currentPosts = images.slice(indexOfFistPost, indexOfLastPost);
 
   return (
     <div className="App">
-      <List images={images} />
+      <List images={currentPosts} loading={loading} />
     </div>
   );
 }
