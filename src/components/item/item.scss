@@ -35,3 +35,9 @@ img {
     margin-top: 0;
     text-align: left;
 }
+
+@media only screen and (max-width: 600px) {
+    .item_container {
+        min-width: 85%;
+    }
+}
