@@ -10,6 +10,8 @@
         align-items: center;
         cursor: auto;
         backdrop-filter: blur(2px);
+        animation: Fade-in 0.4s linear;
+
 }
 
 .popup-inner {
@@ -17,7 +19,17 @@
     padding: 32px;
     width: 100%;
     max-width: 640px;
-    background-color: aqua;
+    background-color: aqua;   
+}
+
+@keyframes Fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .popup-inner .close-btn {
@@ -25,3 +37,4 @@
     top: 16px;
     right: 16px;
 }
+
