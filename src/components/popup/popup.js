@@ -8,7 +8,9 @@ const popup = (props) => {
       <div className="popup-inner">
         <h3>Popup</h3>
         {props.children}
-        <button className="close">X</button>
+        <button className="close" onClick={() => props.setTrigger(false)}>
+          X
+        </button>
       </div>
     </div>
   ) : (
