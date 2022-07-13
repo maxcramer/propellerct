@@ -22,7 +22,7 @@ function App() {
       setImages(items);
     }
   }, []);
-  console.log(images);
+
   if (!images) return <div>Loading...</div>;
 
   // Get current posts
