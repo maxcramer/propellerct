@@ -1,3 +1,7 @@
+nav {
+    width: 100%;
+}
+
 .pag_container {
     display: flex;
     align-items: center;
@@ -25,4 +29,13 @@
 .currentPage {
     text-decoration: underline;
     color: lightskyblue;
+}
+
+@media only screen and (max-width: 600px) {
+    nav {
+        width: 80%;
+    }
+    .pag_container {
+        width: 100%;
+    }
 }
