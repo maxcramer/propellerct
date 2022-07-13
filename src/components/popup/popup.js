@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./popup.css";
+import "./popup.scss";
 
 const popup = (props) => {
   return props.trigger ? (

@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./pagination.css";
+import "./pagination.scss";
 
 const Pagination = ({ postsPerPage, totalPosts, paginate, currentPage }) => {
   const pageNumbers = [];
