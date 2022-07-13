@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import Popup from "../popup/popup";
 
-import "./item.css";
+import "./item.scss";
 
 function Item({ item }) {
   const [popup, setPopup] = useState(false);
