@@ -6,11 +6,13 @@ const popup = (props) => {
   return props.trigger ? (
     <div className="popup" onClick={() => props.setTrigger(false)}>
       <div className="popup-inner">
-        <h3>Popup</h3>
-        {props.children}
-        <button className="close" onClick={() => props.setTrigger(false)}>
-          X
+        <button
+          className="close-btn-pushable"
+          onClick={() => props.setTrigger(false)}
+        >
+          <span className="front">X</span>
         </button>
+        {props.children}
       </div>
     </div>
   ) : (

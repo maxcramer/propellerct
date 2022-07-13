@@ -8,6 +8,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
         cursor: auto;
         backdrop-filter: blur(2px);
         animation: Fade-in 0.4s linear;
@@ -19,7 +20,8 @@
     padding: 32px;
     width: 100%;
     max-width: 640px;
-    background-color: aqua;   
+    background-color: #e6f3ff;  
+    box-shadow: 5px 5px 4px #99d6ff;
 }
 
 @keyframes Fade-in {
@@ -32,9 +34,30 @@
     }
 }
 
-.popup-inner .close-btn {
+.close-btn-pushable {
     position: absolute;
     top: 16px;
     right: 16px;
+    background-color: rgb(153,13,6);
+    color: white;
+    cursor: pointer;  
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+    border-radius: 12px;
 }
 
+.front {
+  display: block;
+  padding: 5px 15px;
+  border-radius: 12px;
+  font-size: 1.25rem;
+  background: red;
+  color: white;
+  transform: translateY(-4px);
+}
+
+.close-btn-pushable:active .front {
+  transform: translateY(-2px);
+}
